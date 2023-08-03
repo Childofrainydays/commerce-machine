@@ -10,8 +10,6 @@ class Category extends Model {}
 // Use the 'init' method to define the model's attributes and configuration options
 Category.init(
   {
-    // Define columns (also known as attributes) of the Category model
-    // Specify the data type and any additional constraints for each column
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true, // Set the 'id' column to be the primary key
@@ -34,4 +32,3 @@ Category.init(
 
 // Export the Category model to be used in other parts of the application
 module.exports = Category;
-

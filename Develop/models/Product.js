@@ -28,6 +28,9 @@ Product.init(
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false, 
+      validate: {
+        isDecimal: true, // checks for a decimal since price can have cents
+      }
     },
   },
   {

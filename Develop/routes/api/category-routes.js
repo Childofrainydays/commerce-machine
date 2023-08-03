@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
   try {
     const categoryData = await Category.findByPk(req.params.id, { // findByPk() is the equivalent of the SQL query SELECT * FROM category WHERE id = 1;
       // JOIN with travellers, using the Trip through table
-      include: [{ model: Product, through: ProductTag, as: 'category_id' }]
+      include: [{ model: Product, through: productTag, as: 'category_id' }]
     });
     if (!categoryData) {
       // If no category is found with the specified id, return a 404 status code
